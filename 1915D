@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int n;
+    cin>>n;
+    while(n--){
+        int m;
+        cin>>m;
+        string s;
+        cin>>s;
+        int i=0;
+        string z=".";
+    
+    while(i<m){
+        if(s[i]=='a' || s[i]=='e')
+        {
+            if(i+2<m && (s[i+2]=='a' || s[i+2]=='e'))
+            {
+                s.insert(i+1,z);
+            }
+            else if(i+2<m){
+                s.insert(i+2,z);
+            }
+        }
+        i++;
+        m=s.size();
+    }
+    cout<<s<<endl;
+    
+}}
