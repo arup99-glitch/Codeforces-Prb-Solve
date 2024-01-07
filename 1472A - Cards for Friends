@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int t,w,h,n;
+    cin>>t;
+    int count=0;
+    while(t--)
+    {
+        cin>>w>>h>>n;
+        int step=0;
+        while(w%2==0){
+            step++;
+            w/=2;
+        }
+        while(h%2==0){
+            step++;
+            h/=2;
+        }
+        if(n<=pow(2,step)){
+            cout<<"Yes"<<endl;
+            continue;
+        }
+        else cout<<"No"<<endl;
+        
+    }
+    r
