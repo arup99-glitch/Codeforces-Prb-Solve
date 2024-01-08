@@ -1,0 +1,23 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+    int n;
+    cin>>n;
+    vector<int>a;
+    for(int i=n;i>0;i--){
+        a.push_back(i);
+    }
+    if(n%2!=0){
+        swap(a[n/2],a[0]);
+    }
+    for(auto i: a){
+        cout<<i<<" ";
+    }
+    cout<<endl;
+    }
+    return 0;
+}
