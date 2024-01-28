@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+    int n,k,i,j;
+    cin>>n>>k;
+    for(i=1;i<=n;i++){
+        for(int j='a';j<=k+96;j++){
+            cout<<char(j);
+        }
+    }
+    cout<<endl;
+    }
+}
