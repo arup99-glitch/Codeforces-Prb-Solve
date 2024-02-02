@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int a,b;
+    cin>>a>>b;
+    int count =0;
+    for(int i=0;i*i<=a && i<=b;i++){
+        for(int j=0;j*j<=b && j<=a;j++){
+            if(i*i+j==a && i+j*j==b)count++;
+        }
+    }
+    cout<<count<<endl;
+
+    return 0;
+}
