@@ -6,12 +6,16 @@ int main()
     int t;
     cin>>t;
     while(t--){
-        int x;
-    cin>>x;
-    if(x%7==0)cout<<x<<endl;
+        int n;
+    cin>>n;
+    if(n%7==0)cout<<n<<endl;
     else{
-        int a=x/7;
-        cout<<a*7<<endl;
+        int ans =-1;
+        for(int j=0;j<10;++j){
+            if((n-n%10+j)%7==0)
+            ans = n-n%10+j;
+        }
+        cout<<ans<<endl;
     }
     }
 }
