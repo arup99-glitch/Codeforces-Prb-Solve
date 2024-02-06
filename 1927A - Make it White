@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        long long n,c,d;
+        string s;
+        cin>>n>>s;
+        for(int i=0;i<n;i++){
+            if(s[i]=='B'){
+                c=i;
+                break;
+            }
+        }
+        for(int j=n-1;j>=0;j--){
+            if(s[j]=='B'){
+                d=j;
+                break;
+            }
+        }
+        if(c==d)cout<<1<<endl;
+        else cout<<d-c+1<<endl;
+    }
+}
