@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    while(n--){
+        int t,count=1;
+        cin>>t;
+        set<int>s;
+       for(int i=1;i*i<=t;i++){
+           s.insert(i*i);
+       }
+       for(int i=2;i*i*i<=t;i++){
+           s.insert(i*i*i);
+       }
+       cout<<s.size()<<endl;
+    }
+    
+}
