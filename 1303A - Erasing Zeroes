@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+        string s;
+        cin>>s;
+        int min,end,c=0;
+        int max;
+        for(min=0;min<s.size();min++){
+            if(s[min]=='1')
+                break;
+         }
+         for(end=s.size();end>0;end--){
+         if(s[end]=='1')
+             break;
+         
+        }
+        for(int i=min;i<=end;i++){
+            if(s[i]=='0')c++;
+        }
+        cout<<c<<endl;
+    }
+}
