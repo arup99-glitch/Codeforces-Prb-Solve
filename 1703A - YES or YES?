@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main(){
+    int n;
+    cin>>n;
+    string s;
+    for(int i=0;i<n;i++){
+        cin>>s;
+        if(s=="YES" || s=="yes" ||s=="Yes" ||s=="yES"||s=="yEs"||s=="yeS"|| s=="YeS"||s=="YEs")cout<<"YES"<<endl;
+        else cout<<"NO"<<endl;
+    }
+}
+→J
