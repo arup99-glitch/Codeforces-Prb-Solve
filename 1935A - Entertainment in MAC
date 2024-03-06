@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+        int n;
+        string s,st;
+        cin>>n>>s;
+        st = s;
+        reverse(s.begin(),s.end());
+        if(st<=s)cout<<st<<endl;
+        else cout<<s<<st<<endl;
+    }
+
+    return 0;
+}
