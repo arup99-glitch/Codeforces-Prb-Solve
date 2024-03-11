@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+        long long n,b,oddPossible=0,evenPossible=0,evenMin=INT_MAX,oddMin=INT_MAX;
+        cin>>n;
+        vector<long long>v;
+        for(int i=0;i<n;i++){
+            cin>>b;
+            v.push_back(b);
+            if(b&1)
+            oddMin=min(oddMin,b);
+            else evenMin= min(evenMin,b);
+        }
+        //all even case
+        for(int i=0;i<n;i++){
+            if(v[i]%2==0){
+            evenPossible++;
+            }
+            else{
+                if((v[i]>oddMin))
+                evenPossible++;
+            }
+        }
+        //all odd case
+        for(int i=0;i<n;i++){
+            if(v[i]%2 != 0) 
+            oddPossible++;
+            else{
+                if(v[i]>oddMin)
+                oddPossible++;
+            }
+        }
+        if(oddPossible == n || evenPossible == n)
+        cout<<"YES"<<endl;
+        else cout<<"NO"<<endl;
+    }
+
+    return 0;
+}
