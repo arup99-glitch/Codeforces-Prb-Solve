@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+        int n;
+        string s;
+        cin>>n>>s;
+        bool flag = true;
+        int count =0;
+        for(int i=0;i<n;i++){
+            if(s[i]=='.')count++;
+            if(i>0 && i<n-1)
+                if(s[i-1]=='.' && s[i]=='.' && s[i+1]=='.'){
+                    cout<<2<<endl;
+                   flag = false;
+                   break;
+                }
+        }
+         if(flag)cout<<count<<endl;
+        
+        
+    }
+
+    return 0;
+}
