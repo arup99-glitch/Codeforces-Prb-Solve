@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main() {
+    
+    int t;
+    cin>>t;
+    while(t--){
+        long long n;
+        cin>>n;
+        long long a[n];
+        for(int i=0;i<n;i++){
+            cin>>a[i];
+        }
+        long long c=0,e=0;
+        for(long long i=0;i<n-1;i++){
+            if(a[i]<a[i+1])c++;
+            if(a[i]==a[i+1])c++;
+        }
+        if(c==n-1){
+            long long mini = INT_MAX;
+            for(long long i=0;i<n-1;i++){
+                mini = min(mini,abs(a[i+1]-a[i]));
+            }
+            cout<<mini/2+1<<endl;
+        }
+        else cout<<"0"<<endl;
+    }
+
+    return 0;
+}
