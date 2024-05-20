@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+        int a,b;
+        cin>>a>>b;
+        int n;
+        if(b%2!=0){
+            n=b/2+1;
+        }
+        else n=b/2;
+        int sum=a+b*4;
+        int s=0;
+        if(sum>n*15){
+            for(int i=n;i<1000;i++)
+            if(sum<=i*15){
+                s=i;
+                cout<<s<<endl;
+                break;
+            }
+        }
+        else cout<<n<<endl;
+        
+    
+    }
+ 
+    return 0;
+}
