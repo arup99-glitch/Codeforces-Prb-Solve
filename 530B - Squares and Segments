@@ -1,0 +1,10 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+    int t;
+    cin>>t;
+    long double a=sqrt(t);
+    cout<<ceil(2*a)<<endl;
+    return 0;
+}
