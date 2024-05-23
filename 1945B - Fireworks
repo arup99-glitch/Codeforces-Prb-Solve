@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    
+    int t;
+    cin>>t;
+    while(t--){
+    long long int a,b,m;
+    cin>>a>>b>>m;
+    long long int x,y;
+    x=m/a;
+    y=m/b;
+   
+    cout<<x+y+2<<endl;
+    }
+
+    return 0;
+}
