@@ -1,0 +1,52 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+    int t;
+    cin>>t;
+    while(t--)
+    {
+      int m,n;
+      cin>>m>>n;
+      string s2;
+      cin>>s2;
+      string a=s2;
+      string s1=s2;
+      set<char> unique_chars(s1.begin(), s1.end());
+      if(n==1)cout<<7-unique_chars.size()<<endl;
+      else{
+      
+    //   for(int i=0;i<n;i++){
+    //       for(int j=0;j<n;j++){
+    //           if()
+    //       }
+          
+    //   }
+      
+      int A=0,b=0,c=0,d=0,e=0,f=0,g=0;
+      for(int i=0;i<m;i++){
+          if(a[i]=='A')A++;
+          else if(a[i]=='B')b++;
+          else if(a[i]=='C')c++;
+          else if(a[i]=='D')d++;
+          else if(a[i]=='E')e++;
+          else if(a[i]=='F')f++;
+          else g++;
+          
+      }
+      int sum=0;
+      if(A<n)sum+=abs(n-A);
+      if(b<n)sum+=abs(n-b);
+      if(c<n)sum+=abs(n-c);
+      if(d<n)sum+=abs(n-d);
+      if(e<n)sum+=abs(n-e);
+      if(f<n)sum+=abs(n-f);
+      if(g<n) sum+=abs(n-g);
+      cout<<sum<<endl;
+      
+    //   cout<<abs(n-A)+abs(n-b)+abs(n-c)+abs(n-d)+abs(n-e)+abs(n-f)+abs(n-g)<<endl;
+    }
+    }
+ 
+    return 0;
+}
