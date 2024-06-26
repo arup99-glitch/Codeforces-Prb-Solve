@@ -1,0 +1,44 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+    while(n--){
+        int n,m;
+        cin>>n>>m;
+        char a[n][m];
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                cin>>a[i][j];
+            }
+        }
+        int mx=0;
+        int h=-1;
+        for(int i=0;i<n;i++){
+            int count=0;
+            for(int j=0;j<m;j++){
+                if(a[i][j]=='#')count++;
+            }
+            if(count>mx){
+                mx=count;
+                h=i;
+            }
+        }
+         int max=0;
+        int k=-1;
+        for(int i=0;i<m;i++){
+            int count1=0;
+            for(int j=0;j<n;j++){
+                if(a[j][i]=='#')count1++;
+            }
+            if(count1>max){
+                max=count1;
+                k=i;
+            }
+        }
+        cout<<h+1<<" "<<k+1<<endl;
+    }
+
+    return 0;
+}
