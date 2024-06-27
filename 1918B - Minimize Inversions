@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+        long long int n;
+        cin>>n;
+        vector<long long int>v1(n),v2(n);
+        for(long long int i=0;i<n;i++){
+            cin>>v1[i];
+        }
+        for(long long int i=0;i<n;i++){
+            cin>>v2[i];
+        }
+        vector<pair<long long int,long long int>>vp;
+        for(long long i=0;i<n;i++){
+            vp.push_back({v1[i],v2[i]});
+        }
+        sort(vp.begin(),vp.end());
+        for(long long int i=0;i<n;i++)
+        cout<<vp[i].first<<" ";
+        cout<<endl;
+        for(long long int i=0;i<n;i++)
+        cout<<vp[i].second<<" ";
+        cout<<endl;
+    }
+     return 0;
+}
