@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long int ll;
+
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+        int a,b;
+        cin>>a>>b;
+        ll mini=10e9,maxi=0;
+        
+        for(int i=0;i<a;i++){
+            ll x;
+            cin>>x;
+            maxi=max(maxi,x);
+            mini=min(mini,x);
+            
+        }
+        for(int i=0;i<b;i++){
+            int l,r;
+            char c;
+            cin>>c>>l>>r;
+            if(c=='+'){
+                if(maxi>=l && maxi<=r)maxi++;
+                if(mini>=l && mini <=r)mini++;
+            }
+            else{
+                if(maxi>=l && maxi<=r)maxi--;
+                if(mini>=l && mini <=r)mini--;
+                
+            }
+            cout<<maxi<<" ";
+        }
+        cout<<endl;
+         }
+
+    return 0;
+}
