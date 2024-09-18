@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+   int t;
+   cin>>t;
+   while(t--){
+      long long int n,f,a,b;
+      cin>>n>>f>>a>>b;
+      long long int sum=0;
+      long long int ar[n];
+      for(long long int i=1;i<=n;i++){
+          cin>>ar[i];
+      }
+     bool flag=true;
+      ar[0]=0;
+      for(long long int i=1;i<=n;i++){
+          if((abs(ar[i]-ar[i-1])*a)<b){
+              f-=abs((ar[i]-ar[i-1])*a);
+          }
+          else {
+              f-=b;
+          }
+          if(f<=0){
+              flag = false;
+              break;
+          }
+      }
+      if(flag)cout<<"YES"<<endl;
+      else cout<<"NO"<<endl;
+   }
+
+    return 0;
+}
