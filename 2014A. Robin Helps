@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long int ll;
+ 
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+        ll n,b;
+       cin>>n>>b;
+       ll count=0,a;
+       ll king=0;
+       vector<ll>v(n);
+       for(ll i=0;i<n;i++){
+           cin>>v[i];
+       }
+       for(int i=0;i<n;i++){
+           if(v[i]==0){
+               if(king!=0){
+                   count++;
+                   king--;
+               }
+               else continue;
+               
+           }
+           else if(v[i]>=b) king+=v[i];
+       }
+       cout<<count<<endl;
+       
+      
+    }
+   
+ 
+    return 0;
+}
