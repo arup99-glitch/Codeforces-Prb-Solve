@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+        int xa,ya,xb,yb,xc,yc;
+        cin>>xa>>ya>>xb>>yb>>xc>>yc;
+        int count=1;
+        if((xb<xa && xc<xa) || (xb>xa && xc>xa)) {
+            count+=min(abs(xb-xa),abs(xc-xa));
+        }
+        if((yb<ya && yc<ya) || (yb>ya && yc>ya)){
+            count+=min(abs(ya-yb),abs(ya-yc));
+            
+        }
+        cout<<count<<endl;
+    }
+ 
+    return 0;
+}
