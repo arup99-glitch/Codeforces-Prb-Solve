@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+    ll a,b,c,d;
+    cin>>a>>b;
+    cin>>c>>d;
+     ll ans=0;
+    if(b<c|| d<a)cout<<1<<endl;
+    else{
+        vector<ll>rooms(101,0);
+        for(ll i=a;i<=b;i++)rooms[i]++;
+        for(ll i=c;i<=d;i++)rooms[i]++;
+        for(ll i=1;i<=100;i++){
+            if(rooms[i]==2 && rooms[i-1]>0)ans++;
+            if(rooms[i]==1 && rooms[i-1]==2)ans++;
+        }
+        cout<<ans<<endl;
+        
+    }
+    
+    }
+    
+    return 0;
+}
