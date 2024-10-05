@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+#define ll long long
+using namespace std;
+
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        ll n,m,k,x;
+        cin>>n>>m>>k;
+        set<int>a,b,c;
+        for(ll i=0;i<n+m;i++){
+            cin>>x;
+            if(x<=k && i<n){
+                a.insert(x);
+                c.insert(x);
+            }
+            if(x<=k&&i>=n){
+                b.insert(x);
+                c.insert(x);
+            }
+        }
+        cout<<(a.size()>=k/2 && b.size()>=k/2 && c.size()==k?"YES":"NO")<<endl;
+        
+    }
+
+    return 0;
+}
