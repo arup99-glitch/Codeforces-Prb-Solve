@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long;
+
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+        int n,p;
+        cin>>n>>p;
+        vector<pair<int,int>>ba(n);
+        for(int i=0;i<n;i++)cin>>ba[i].second;
+        for(int i=0;i<n;i++)cin>>ba[i].first;
+        if(n==1){
+            cout<<p<<endl;
+            continue;
+        }
+        sort(ba.begin(),ba.end());
+        if(ba[0].first>=p){
+            cout<<(long long)p*(long long)n<<endl;
+            continue;
+        }
+        long long sum=p;
+        int tp=n-1;
+        for(int i=0;i<n;i++){
+            if(ba[i].first>p)break;
+            sum+=(long long)ba[i].first *(long long)min(ba[i].second,tp);
+            tp-=min(ba[i].second,tp);
+            if(tp==0)break;
+        }
+        if(tp==0){
+            cout<<sum<<endl;
+            continue;
+        }
+        cout<<sum+(long long)tp*(long long)p<<endl;
+    }
+
+    return 0;
+}
