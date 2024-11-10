@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+        int n;
+        cin>>n;
+        ll mini=LLONG_MAX;
+        ll secondsum = 0;
+        ll minisecond = LLONG_MAX;
+        for(ll i=1;i<=n;i++){
+            ll m;
+            cin>>m;
+            vector<ll>a(m);
+            for(ll i=0;i<m;i++){
+                cin>>a[i];
+            }
+            sort(a.begin(),a.end());
+            mini = min(mini,a[0]);
+            secondsum+=a[1];
+            minisecond = min(minisecond,a[1]);
+        }
+        cout<<mini+secondsum-minisecond<<endl;
+    }
+
+    return 0;
+}
