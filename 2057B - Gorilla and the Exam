@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+        int n,k;
+        cin>>n>>k;
+        map<int,int>mp;
+        for(int i=0;i<n;i++){
+            int x;
+            cin>>x;
+            mp[x]++;
+        }
+        vector<int>v;
+        int ans = mp.size();
+        for(auto i: mp){
+            v.push_back(i.second);
+        }
+        sort(v.begin(),v.end());
+        for(auto i:v){
+            if(k>=i){
+                ans--;
+                k-=i;
+            }
+        }
+        cout<<max(ans,1)<<endl;
+    }
+
+    return 0;
+}
