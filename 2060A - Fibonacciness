@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main(){
+  
+  int t;
+  cin>>t;
+  while(t--){
+    int a,b,d,e;
+    cin>>a>>b>>d>>e;
+    int c=e-d;
+    int count=0;
+    if(c==a+b)count++;
+    if(d==b+c)count++;
+    if(e==c+d)count++;
+    int c1= d-b;
+    int count1=0;
+     if(c1==a+b)count1++;
+    if(d==b+c1)count1++;
+    if(e==c1+d)count1++;
+    if(count1>count)cout<<count1<<endl;
+    else cout<<count<<endl;
+    
+ 
+ 
+  }
+   
+    
+}
