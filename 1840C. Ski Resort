@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int t;
+    cin >> t;
+    while (t--) {
+        int n, m, k;
+        cin >> n >> m >> k;
+        vector<int> v(n);
+        for (int i = 0; i < n; i++) {
+            cin >> v[i];
+        }
+ 
+        long long sum = 0;
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            if (v[i] <= k) {
+                count++;
+            } else {
+                count = 0;
+            }
+ 
+            if (count >= m) {
+                sum += (count - m + 1);
+            }
+        }
+        cout << sum << endl;
+    }
+    return 0;
+}
