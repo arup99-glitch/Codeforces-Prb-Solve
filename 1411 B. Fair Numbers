@@ -1,0 +1,29 @@
+#include <iostream>
+#define ll long long int
+using namespace std;
+ 
+int main() 
+{
+    int t;
+    cin>>t;
+    while(t--){
+      ll n;
+      cin>>n;
+      while(true){
+        bool ok = true;
+        string x = to_string(n);
+        
+        for(int i=0;i<x.length();i++){
+          if(x[i] !='0' && n%(x[i]-'0')!=0){
+            ok = false;
+            break;
+          }
+          
+        }
+        if(ok)break;
+        n++;
+      }
+      cout<<n<<endl;
+      
+    }
+}
