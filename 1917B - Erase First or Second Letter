@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{   
+  
+  int t;
+  cin>>t;
+  while(t--){
+    int n;
+    cin>>n;
+    string s;
+    cin>>s;
+    set<char>s1;
+    int count=0;
+    
+    for(int i=0;i<n;i++){
+      
+      s1.insert(s[i]);
+      count+=s1.size();
+    }
+    cout<<count<<endl;
+    
+  }
+  
+    return 0;
+}
