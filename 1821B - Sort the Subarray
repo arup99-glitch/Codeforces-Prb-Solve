@@ -1,0 +1,49 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main() 
+{
+    int t;
+    cin>>t;
+    while(t--){
+      int n,left=-1,right=-1,left1=-1,right1=-1;
+      cin>>n;
+      int a[n],b[n];
+      for(int i=0;i<n;i++){
+        cin>>a[i];
+      }
+      for(int i=0;i<n;i++){
+        cin>>b[i];
+      }
+      for(int i=0;i<n;i++){
+        if(a[i]!=b[i]){
+          left=i;
+          break;
+        }
+      }
+      for(int i=n-1;i>=0;i--){
+        if(a[i]!=b[i]){
+          right=i;
+          break;
+        }
+      }
+      for(int i=left;i>0;i--){
+        if(b[i]>=b[i-1]) left1=i-1;
+        else break;
+      }
+      for(int i=right;i<(n-1);i++){
+        if(b[i]<=b[i+1]) right1=i+1;
+        else break;
+      }
+      
+      
+      if(left1 != -1)cout<<left1+1;
+      else cout<<left+1;
+      cout<<" ";
+      if(right1 != -1)cout<<right1+1<<endl;
+      else cout<<right+1<<endl;
+    
+    }
+    return 0;
+    
+}
